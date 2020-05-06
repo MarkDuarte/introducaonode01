@@ -63,7 +63,7 @@ app.put("/repositories/:id", validateRepositoryId, (request, response) => {
   const repositoryIndex = repositories.findIndex(repository => repository.id === id);
 
   if (repositoryIndex < 0) {
-    return response.status(400).json({ error: 'Repository not found '});
+    return response.status(400).json({ error: 'Repository not found. '});
   }
 
   const { likes } = repositories[repositoryIndex];
